@@ -1,5 +1,7 @@
 .classpath
 .project
+src/main/latex/Olivier.LE-JACQUES.FRENCH/Olivier.LE-JACQUES.FRENCH.aux
+src/main/latex/Olivier.LE-JACQUES.FRENCH/Olivier.LE-JACQUES.FRENCH.log
 .settings/
 target/
 /bin/
