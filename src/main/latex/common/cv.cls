@@ -36,11 +36,14 @@
 \LoadClass[10pt]{article}
 \RequirePackage{ifthen}
 \RequirePackage{array}
+\RequirePackage{longtable}
 
 %% Mise en page par défaut
 
 \setlength{\textwidth}{160mm}    %% Largeur de la zone texte
 \setlength{\oddsidemargin}{0mm}	 %% Texte centré sur la page
+\setlength{\LTpre}{0pt}          %% Suppression espace avant longtable
+\setlength{\LTpost}{0pt}         %% Suppression espace après longtable
 
 \pagestyle{empty} % pour ne pas indiquer de numéro de page...
 
@@ -120,12 +123,12 @@
    {}%
 \addtolength{\@cvlenC}{-\@cvlenB}%
 \addtolength{\@cvlenC}{-39pt}%
-\begin{tabular}[t]{p{\@cvlenB}!{%
+\begin{longtable}[t]{p{\@cvlenB}!{%
    \ifthenelse{\lengthtest{\rubriquetableauparindent<0pt}}%
 	      {\hspace*{-\rubriquetableauparindent}}%
 	      {}%
     }>{}p{\@cvlenC}}}%
-{\end{tabular}\egroup}%
+{\end{longtable}\egroup}%
 
 \makeatother
 
