@@ -13,16 +13,6 @@
 \setlength{\LTpre}{0pt}          %% Suppression espace avant longtable
 \setlength{\LTpost}{0pt}         %% Suppression espace après longtable
 
-\pagestyle{empty} % pour ne pas indiquer de numéro de page...
-
-% On définit les pieds de page comme des \stretch de force 1,
-% soit 4 plus fort que celui qui est en bas du chapeau
-% (Cf. ci-dessous). De cette façon, un CV qui ne remplit pas toute la
-% page a un bel espacement.
-\makeatletter
-\def\@textbottom{\vspace*{\stretch{1}}}
-\makeatother
-
 %% Paramètres réglables
 
 % L'utilisateur peut les redéfinir ceux-ci «\renewcommand» si besoin :
