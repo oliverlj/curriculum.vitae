@@ -1,37 +1,5 @@
-%% Copyright (c) 2003-2009 Frédéric Meynadier  
-%% Classe de document de curriculum vitae
-
-%% Original : Eric-Olivier Le Bigot
-%% Update : Frédéric Meynadier (Frederic.Meynadier@obspm.fr)
-%% Update : Dominique Quatravaux (dom@idealx.com) - conversion en classe de
-%% document.
-%% 03/01/03
-%% Update : application d'un patch de Jonas Kahn, 2007-12-19
-%% Update : anonymisation de l'exemple en commentaire, 2009-02-25
-%% Update : oliverlj
-
-%% Permission is hereby granted, free of charge, to any person obtaining a
-%% copy of this software and associated documentation files (the
-%% "Software"), to deal in the Software without restriction, including
-%% without limitation the rights to use, copy, modify, merge, publish,
-%% distribute, sublicense, and/or sell copies of the Software, and to
-%% permit persons to whom the Software is furnished to do so, subject to
-%% the following conditions:
-
-%% The above copyright notice and this permission notice shall be included in
-%% all copies or substantial portions of the Software.
-
-%% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-%% OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-%% MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-%% IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-%% CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-%% TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-%% SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{cv}
-  [2002/01/03 v0.1 Curriculum Vitae package]
 
 \LoadClass[10pt]{article}
 \RequirePackage{ifthen}
@@ -74,10 +42,6 @@
 
 %% Macros pratiques
 
-\def\er{$^{\hbox{er}}$}
-\def\ere{$^{\hbox{ère}}$}
-\def\eme{$^{\hbox{ème}}$}
-
 %% L'environnement "rubrique"
 
 % Usage : \begin{rubrique}[Indentation]{Titre} [...] \end{rubrique}
@@ -89,25 +53,6 @@
 \noindent\rule[0.5ex]{\textwidth}{0.1mm}\par}{}
 
 %% L'environnement "rubriquetableau" %
-
-% Il sert à rendre les tableaux, avec typiquement des dates à gauche
-% et des activités à droite. Il s'utilise comme «rubrique»
-% ci-dessus, sauf qu'il admet un argument optionnel qui est la largeur
-% de la colonne de gauche, et que l'intérieur doit être un tableau
-% LaTeX avec les «&» et les «\\» qui vont bien.
-% Par exemple :
-%
-% \begin{rubriquetableau}[3.5cm]{pipotage}
-% 1999--2000 	& ligne 1\\
-% 		& ligne 2\\
-% 1998--1999	& ligne 1\\
-% [etc...]
-% \end{rubriquetableau}
-%
-% Lorsqu'on omet le paramètre entre crochets, cela a pour effet
-% de donner la dimension \linewidth à la première colonne (mais la
-% structure reste celle d'un tableau à deux colonnes, donc ne pas oublier 
-% d'écrire '\\' pour les retours à la ligne).
 
 \makeatletter
 
@@ -132,23 +77,7 @@
 
 \makeatother
 
-%% Le chapeau du CV        %
-
-% Usage:
-% \begin{chapeau}
-% \begin{adresse}
-%	Isaac NEWTON\\%
-%	9.81, rue des Pommiers\\%
-%	Trinity College, Londres\\%
-%	\ligne\\%
-%	Tél. : 06 67 25 90 00\\%
-%	E-mail : \texttt{inewton@apple.com}
-% \end{adresse}
-% \begin{etatcivil}
-%	Né le 25/12/1642\\
-%	Nationalité anglaise
-% \end{etatcivil}
-% \end{chapeau}
+%% Le chapeau du CV
 
 \newenvironment{adresse}{%
 \begin{minipage}{7cm}
