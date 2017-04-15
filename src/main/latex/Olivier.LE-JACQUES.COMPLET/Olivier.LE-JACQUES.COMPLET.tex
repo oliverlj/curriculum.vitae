@@ -2,13 +2,18 @@
 \usepackage[francais]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[paper=a4paper, top=1cm, bottom=0.5cm, left=2cm, right=2cm]{geometry}
+\usepackage[paper=a4paper,top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 \usepackage{graphicx}
 \usepackage{epsfig}
 \usepackage{amsmath, amsthm}
 \usepackage{amsfonts,amssymb}
 \usepackage[normalem]{ulem}
 \usepackage{alltt,xspace}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
 \newcommand{\lieu}[1]{\textbf{#1}\ }
 \newcommand{\activite}[1]{\textbf{#1}\ }
@@ -48,10 +53,9 @@
 \end{rubriquetableau}
 
 \begin{rubriquetableau}[\firstcolumnwidth]{Expériences Professionnelles}
-    \input{\experiencedir/01-gfi} \\
-	\input{\experiencedir/02-infotel} \\
+    \input{\experiencedir/28-gfi-ag2r-complet}
 \end{rubriquetableau}
-    
+
 \begin{rubriquetableau}[\firstcolumnwidth]{Formation}
     \input{\educationdir/01-master}
     \input{\educationdir/02-erasmus}
@@ -59,7 +63,7 @@
 \end{rubriquetableau}
 
 \begin{rubriquetableau}[\firstcolumnwidth]{Loisirs}
-	& Domotique, randonnée et snowboard
+	&Domotique, randonnée et snowboard
 \end{rubriquetableau}
 
 \end{document}
