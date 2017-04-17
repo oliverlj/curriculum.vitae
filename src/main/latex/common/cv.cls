@@ -2,22 +2,25 @@
 \ProvidesClass{cv}
 
 \LoadClass[10pt]{article}
+\RequirePackage[francais]{babel}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
 \RequirePackage{ifthen}
 \RequirePackage{array}
 \RequirePackage{longtable}
 
 %% Mise en page par défaut
-
 \setlength{\textwidth}{160mm}    %% Largeur de la zone texte
 \setlength{\oddsidemargin}{0mm}	 %% Texte centré sur la page
 \setlength{\LTpre}{0pt}          %% Suppression espace avant longtable
 \setlength{\LTpost}{0pt}         %% Suppression espace après longtable
 
 %% Paramètres réglables
-
-% L'utilisateur peut les redéfinir ceux-ci «\renewcommand» si besoin :
-
 \newcommand{\espaceInterRubrique}{\medskip\vspace{\stretch{0.1}}}
+\newcommand{\lieu}[1]{\textbf{#1}\ }
+\newcommand{\activite}[1]{\textbf{#1}\ }
+\newcommand{\comment}[1]{\textsl{#1}\ }
+\newcommand{\lien}[1]{\underline{\textcolor{blue}{#1}}}
 
 % L'utilisateur peut les redéfinir ceux-ci «\setlength» si besoin :
 
