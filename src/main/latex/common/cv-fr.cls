@@ -11,9 +11,10 @@
 \setlength{\espaceChamps}{1mm}
 
 % Input directory
-\newcommand{\educationdir}{french/education}
-\newcommand{\experiencedir}{french/experience}
-\newcommand{\skilldir}{french/skill}
+\newcommand{\workdir}{french}
+\newcommand{\educationdir}{\workdir/education}
+\newcommand{\experiencedir}{\workdir/experience}
+\newcommand{\skilldir}{\workdir/skill}
 
 % Variable
 \newlength{\firstcolumnwidth}%
