@@ -6,6 +6,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.build.timestamp.format>yyyyMMdd</maven.build.timestamp.format>
 	</properties>
 	<build>
 		<plugins>
@@ -30,6 +31,40 @@
 						<goals>
 							<goal>latex</goal>
 						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.coderplus.maven.plugins</groupId>
+				<artifactId>copy-rename-maven-plugin</artifactId>
+				<version>1.0</version>
+				<executions>
+					<execution>
+						<id>include-date</id>
+						<phase>package</phase>
+						<goals>
+							<goal>rename</goal>
+						</goals>
+						<configuration>
+							<fileSets>
+								<fileSet>
+									<sourceFile>target/olivier-le-jacques.pdf</sourceFile>
+									<destinationFile>target/olivier-le-jacques-${maven.build.timestamp}.pdf</destinationFile>
+								</fileSet>
+								<fileSet>
+									<sourceFile>target/olivier-le-jacques-complet.pdf</sourceFile>
+									<destinationFile>target/olivier-le-jacques-complet-${maven.build.timestamp}.pdf</destinationFile>
+								</fileSet>
+								<fileSet>
+									<sourceFile>target/ingenieur-java-ee.pdf</sourceFile>
+									<destinationFile>target/ingenieur-java-ee-${maven.build.timestamp}.pdf</destinationFile>
+								</fileSet>
+								<fileSet>
+									<sourceFile>target/ingenieur-java-ee-complet.pdf</sourceFile>
+									<destinationFile>target/ingenieur-java-ee-complet-${maven.build.timestamp}.pdf</destinationFile>
+								</fileSet>
+							</fileSets>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
