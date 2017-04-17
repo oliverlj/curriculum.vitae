@@ -6,6 +6,7 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{ifthen}
+\RequirePackage{color}
 \RequirePackage{array}
 \RequirePackage{longtable}
 
